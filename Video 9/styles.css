@@ -1,0 +1,11 @@
+.red{
+color: red;
+}
+.bg-yellow{
+background-color: rgb(68, 58, 58);
+
+}
+/* . is used to select class
+   # is used to select id */
+#firstdiv{
+    

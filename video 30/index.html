@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global var in CSS</title>
+    <style>
+        :root{
+            --color:rgb(236, 174, 226);
+            --seccolor:rgb(218, 122, 166); /* global variable */
+            --defpad:28px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+      ul{
+        display: flex;
+        
+      }
+      ul li{
+        opacity: 0.5;
+        list-style: none;
+        margin: 10px;
+        padding: var(--defpad);
+        border: 2px solid var(--seccolor);
+      }
+      ul li:first-child{
+        --color:rgb(233, 43, 122);
+        background-color: var(--color,blue); /* if color name var is not find then blue color will be apply */
+
+      }
+
+      
+        
+.navbar{
+     
+background-color: var(--color);
+}
+.container{
+    background-color:var(--seccolor);
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, consectetur cumque rerum alias minima unde culpa, expedita dolor corrupti doloremque possimus omnis a? Corrupti placeat molestias rerum ipsam tempore possimus, at, itaque illum sit voluptatem non exercitationem esse ab perspiciatis voluptate voluptates aspernatur? Dolorem, nesciunt!</div>
+    
+</body>
+</html>

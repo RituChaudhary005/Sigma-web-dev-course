@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+            /*Element Selector*/
+        div{
+            /* background-color: lightblue; */
+        }
+        /*Class Selector*/
+        .red{
+             background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        /*ID Selector*/
+        #green{
+            background-color: green;
+        }
+        /*Child Selector*/
+        div>p{
+            background-color: yellow;
+            color: black;
+        }
+        /*Descendant Selector*/
+        div p{
+            background-color: palevioletred;
+            color: slategray;
+        }
+        /*Universal Selector*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        
+        }
+        /*Pseudo-class Selector*/
+        a:visited{
+            color: rgb(140, 126, 189);
+        }
+        a:link{
+            color: orange;
+        }
+        a:active{
+            background-color: brown;
+        }
+        a:hover{
+            background-color: lightgray;
+        }
+        p:first-child{
+            background-color: lime;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="none">
+        <p>First paragraph in main.</p>
+        <p>Second paragraph in main.</p>
+    </main>
+    <div class="red">
+        <article>
+        I am a div
+        <p>This is a paragraph inside the red div.</p>
+    </article>
+    </div>
+    <div id="green">
+        I am another div
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.Facebook.com">Go to Facebook</a>
+</body>
+</html>

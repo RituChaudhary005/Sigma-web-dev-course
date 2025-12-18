@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <!-- Specificity-last color will be implemented without Specificity if selectors are of same type:
+     1.First priority will be given to inline CSS
+     2.Second priority will be given to ID selectors
+     3.Third priority will be given to class selectors
+     4.Fourth priority will be given to element selectors
+     5.Last priority will be given to universal selectors
+    -->
+    <style>
+        /* The specificity of this selector is 1 */
+        h1 {
+            color: blue;
+        }
+
+        /* The specificity of this selector is 10 */
+
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this selector is 1+10 */
+        .cpurple {
+            color: purple;
+        }
+
+        .cred {
+            color: red;
+        }
+         /* The specificity of this selector is 1+10+10+10+10=41 */
+        a.harryclass.rohan-class[href]:hover{
+            color:blueviolet
+        }
+
+        /* This is an example of attribute selector.The specificity of this selector is 10 */
+        /* [data-x=a]{
+                color: maroon;
+            } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>
